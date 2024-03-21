@@ -55,6 +55,12 @@ function App() {
     return null
   }
 
+  const resetGame = () => {
+    setBoard(Array(9).fill(null))
+    setTurn(turno.X)
+    setWinner(null)
+  }
+
   const updateBoard = (index) => {
     if (board[index] || winner) return
     const newBoard = [...board]
@@ -71,7 +77,7 @@ function App() {
   }
   return (
     <main className='board'>
-      <h1>TRIKI exotico</h1>
+      <h1>TRIKI EXÓTICO</h1>
       <section className='game'>
         {
           board.map((_, index) => {
@@ -91,8 +97,35 @@ function App() {
           {turno.O}
         </Square>
       </section>
+
+      <section>
+        {
+          winner != null && (
+            <section className="winner">
+              <div className="text">
+                <h2>
+                  {
+                    winner === false
+                    ? 'Empate'
+                    : 'Gano' + '' + winner
+                  }
+                </h2>
+                <header className="win">
+                  {winner && <Square>{winner}</Square>}
+                </header>
+
+                <footer>
+                  <button onClick={resetGame}>Jugar de nuevo</button>
+                </footer>
+              </div>
+            </section>
+          )
+        }
+      </section>
+      <button onClick={resetGame}>RESET</button>
     </main >
   )
 }
 
 export default App
+//npm run dev

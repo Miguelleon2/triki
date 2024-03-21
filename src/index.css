@@ -1,11 +1,12 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #120142;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,6 +24,7 @@ a:hover {
 }
 
 body {
+  
   margin: 0;
   display: flex;
   justify-content: center;
@@ -43,7 +45,7 @@ body {
 }
 
 .board h1 {
-  color: #eee;
+  color: #978800;
   margin-bottom: 16px;
 }
 
@@ -51,8 +53,8 @@ body {
   padding: 8px 12px;
   margin: 25px;
   background: transparent;
-  border: 2px solid #eee;
-  color: #eee;
+  border: 2px solid #978800;
+  color: #978800;
   width: 100px;
   border-radius: 5px;
   transition: 0.2s;
@@ -61,7 +63,7 @@ body {
 }
 
 .board button:hover {
-  background: #eee;
+  background: rgb(110, 58, 255);
   color: #222;
 }
 
@@ -89,8 +91,8 @@ body {
 }
 
 .square.is-selected {
-  color: #fff;
-  background: #09f;
+  color: #978800;
+  background: rgb(110, 58, 255);
 }
 
 .winner {
@@ -129,7 +131,7 @@ body {
 .square {
   width: 100px;
   height: 100px;
-  border: 2px solid #eee;
+  border: 5px solid #978800;
   border-radius: 5px;
   display: grid;
   place-items: center;
